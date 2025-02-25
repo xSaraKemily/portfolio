@@ -1,0 +1,17 @@
+{
+    "ROLE": "Software Engineer",
+    "WELCOME": "Hello, I'm",
+    "DESCRIPTION": "Software Engineer with 5 years of experience in full-stack development, including significant hands-on work with PHP/Laravel and Typescript/Angular",
+    "CONTACT": {
+        "TITLE": "Contact",
+        "DOWNLOAD_CV": "Download CV"
+    },
+    "PROJECTS": {
+        "TITLE": "Projects",
+        "TECH_STACK": "Tech Stack:",
+        "VIEW_ON_PRODUCTION": "View Project on production",
+        "PROJECT_DESCRIPTIONS": {
+            "TASK_FLOW": "This is a task manager project developed for my portfolio, focusing on practicing Angular features. It allows users to add, edit, and delete tasks, with data stored in local storage instead of a database. The main goal was to implement the logic and user interface using Angular's capabilities."
+        }
+    }
+}

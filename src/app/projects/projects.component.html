@@ -1,0 +1,51 @@
+<section class="bg-pink-200 py-12 text-center">
+    <h1 class="text-5xl font-bold text-black"> {{ 'PROJECTS.TITLE' | translate }} </h1>
+
+    <div class="w-full mt-10 flex items-center justify-center px-7 gap-7">
+      @for (project of projects; track $index) {
+        <div class="text-gray-700 flex flex-col w-5/12 gap-4 shadow-lg bg-white border p-6 rounded-lg items-center overflow-auto" style="height: 670px;">
+          <span class="text-xl font-bold text-gray-700">{{ project.name }}</span>
+
+          @if(project.imgs.length > 1) {
+            <div class="w-full justify-center flex items-center gap-3 relative">
+                <img src="assets/arrow-left.svg" class="w-10 left-0 absolute cursor-pointer" (click)="carousselClick('PREVIOUS', project.imgs)">
+              
+              @for (img of project.imgs; track $index) {
+                  <img [src]="img.url" class="h-60" [hidden]="!img.show"/>
+              }
+              
+              <img src="assets/arrow-right.svg" class="w-10 right-0 absolute cursor-pointer" (click)="carousselClick('NEXT', project.imgs)">
+            </div>
+          } @else {
+            <img src="assets/task-flow-dark.png" class="h-60"/>
+          }
+
+          <span class="text-left">{{ project.description| translate }}</span>
+ 
+          <div class="flex text-start w-full mt-5">
+           <span class="font-bold"> {{ 'PROJECTS.TECH_STACK' | translate }} </span>&nbsp;&nbsp;
+
+            <div class="flex text-left w-9/12">
+              <div class="flex flex-wrap gap-2">
+                @for (stack of project.stack; track $index; let last = $last) {
+                  <div class="flex items-center gap-2 border p-2 rounded-lg shadow-md bg-gray-100">
+                    <img [src]="technologiesMeta[stack].icon" [alt]="technologiesMeta[stack].name" class="w-6 h-6">
+                    <span class="text-sm font-medium">{{technologiesMeta[stack].name}}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="flex w-full justify-center h-full items-end">
+              <button class="flex gap-2 w-72 h-[40px] items-center px-6 py-2 rounded-full text-white font-semibold shadow-md
+              hover:bg-blue-700 bg-gradient-to-r from-pink-500 to-purple-500" (click)="openProject(project.link)">
+              <img class="h-5" src="assets/link.svg" alt="github icon">
+
+              {{ 'PROJECTS.VIEW_ON_PRODUCTION' | translate }}
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+</section>
