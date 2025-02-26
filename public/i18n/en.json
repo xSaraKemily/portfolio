@@ -2,6 +2,7 @@
     "ROLE": "Software Engineer",
     "WELCOME": "Hello, I'm",
     "DESCRIPTION": "Software Engineer with 5 years of experience in full-stack development, including significant hands-on work with PHP/Laravel and Typescript/Angular",
+    "CHANGE_LANGUAGE": "Change Language:",
     "CONTACT": {
         "TITLE": "Contact",
         "DOWNLOAD_CV": "Download CV"

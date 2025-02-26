@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-10">
     <div class="absolute right-0 pr-10 pt-10 flex gap-3 items-center text-gray-400">
-      Change Language:
+        {{  'CHANGE_LANGUAGE' | translate }}
 
       <img class="w-9 cursor-pointer" src="assets/usa.svg" alt="usa flag" (click)="selectLanguage('en')" 
         [class.opacity-50]="translateService.currentLang != 'en'">
