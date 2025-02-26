@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,13 +7,17 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
+  constructor(private translateService: TranslateService) {}
+  
   public downloadCV(): void {
+    const isEnglishLanguage = this.translateService.currentLang == 'en';
+
     const link = document.createElement('a');
     
-    link.href = 'assets/resume.pdf';
+    link.href = isEnglishLanguage ? 'assets/resume.pdf' : 'assets/curriculo.pdf';
+    link.download = isEnglishLanguage ? 'Resume-Sara-Kemily-Ventura.pdf' : 'Curriculo-Sara-Kemily-Ventura.pdf';
     link.target = '_blank';
-    link.download = 'Resume-Sara-Kemily-Ventura.pdf';
-
+    
     document.body.appendChild(link);
     link.click();
 
