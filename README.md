@@ -27,4 +27,5 @@ I am a FullStack developer with experience in Angular, Laravel, PHP, and TypeScr
 ## 🌎 Acesse Meu Portfólio
 
 🔗 [My Portfolio](https://xsarakemily.github.io/portfolio/)  
-![image](https://github.com/user-attachments/assets/e535115c-917c-46c6-ab76-12d4d6f03b4c)
+![image](https://github.com/user-attachments/assets/5d23778a-29f6-4308-a90d-3cf3e9066131)
+
