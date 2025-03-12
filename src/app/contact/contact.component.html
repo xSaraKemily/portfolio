@@ -13,8 +13,9 @@
 
     <button class="flex gap-2 items-center px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-800 transition" 
       (click)="openLinkedin()">
-      <img class="h-5" src="assets/link.svg" alt="linkedin icon">
-      LinkedIn
+        <img class="h-5 hidden sm:block" src="assets/link.svg" alt="linkedin icon">
+        <img class="h-6 sm:hidden block" src="assets/linkedin.svg" alt="linkedin icon">
+      <span class="sm:block hidden">LinkedIn</span>
     </button>
 
     <button class="flex gap-2 px-6 py-2 rounded-full bg-white text-black font-semibold shadow-md hover:bg-gray-400 transition" 
