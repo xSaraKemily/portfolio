@@ -1,5 +1,5 @@
 <div class="flex flex-col gap-10">
-    <div class="absolute right-0 pr-10 pt-10 flex gap-3 items-center text-gray-400">
+    <div class="absolute right-0 pr-3 sm:pr-5 pt-10 flex gap-3 items-center text-gray-400">
         {{  'CHANGE_LANGUAGE' | translate }}
 
       <img class="w-9 cursor-pointer" src="assets/usa.svg" alt="usa flag" (click)="selectLanguage('en')" 
@@ -22,7 +22,7 @@
           </div>
 
           <div class="flex flex-col gap-4">
-            <h1 class="text-3xl font-bold text-pink-200"> Stack </h1>
+            <h1 class="text-3xl font-bold text-pink-200"> {{ 'MAIN_STACK' | translate }} </h1>
 
             <div class="flex items-center justify-center gap-5 flex-wrap">
               @for (stack of stackList; track $index) {
@@ -36,7 +36,7 @@
           </div>
       </div>
 
-      <div class="relative w-80 h-80">
+      <div class="relative w-80 h-80 hidden sm:block">
           <div class="absolute inset-0 border-8 border-pink-200 border-dashed rounded-full animate-spin-slow"></div>
 
           <div class="absolute inset-8 rounded-full overflow-hidden w-64 h-64 bg-black">
@@ -48,7 +48,7 @@
   <app-projects />
 
   <div class="absolute right-0 bottom-5 animate-bounce">
-    <img src="assets/arrow.svg" alt="arrow" class="w-28 h-28">
+    <img src="assets/arrow.svg" alt="arrow" class="w-20 h-20 sm:w-28 sm:h-28">
   </div>
 </div>
 

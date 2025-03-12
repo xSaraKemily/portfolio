@@ -1,9 +1,9 @@
 <section class="bg-pink-200 py-12 text-center">
     <h1 class="text-5xl font-bold text-black"> {{ 'PROJECTS.TITLE' | translate }} </h1>
 
-    <div class="w-full mt-10 flex items-center justify-center px-7 gap-7">
+    <div class="w-full mt-10 flex items-center justify-center px-7 gap-7 sm:flex-row flex-col">
       @for (project of projects; track $index) {
-        <div class="text-gray-700 flex flex-col w-5/12 gap-4 shadow-lg bg-white border p-6 rounded-lg items-center overflow-auto" style="height: 670px;">
+        <div class="text-gray-700 flex flex-col w-full sm:w-5/12 gap-4 shadow-lg bg-white border p-6 rounded-lg items-center overflow-auto" style="height: 670px;">
           <span class="text-xl font-bold text-gray-700">{{ project.name }}</span>
 
           @if(project.imgs.length > 1) {
@@ -11,7 +11,9 @@
                 <img src="assets/arrow-left.svg" class="w-10 left-0 absolute cursor-pointer" (click)="carousselClick('PREVIOUS', project.imgs)">
               
               @for (img of project.imgs; track $index) {
-                  <img [src]="img.url" class="h-60" [hidden]="!img.show"/>
+                <a [href]="img.url" target="_blank" [hidden]="!img.show">
+                  <img [src]="img.url" class="h-60"/>
+                </a>
               }
               
               <img src="assets/arrow-right.svg" class="w-10 right-0 absolute cursor-pointer" (click)="carousselClick('NEXT', project.imgs)">
@@ -38,11 +40,11 @@
           </div>
 
           <div class="flex w-full justify-center h-full items-end">
-              <button class="flex gap-2 w-72 h-[40px] items-center px-6 py-2 rounded-full text-white font-semibold shadow-md
-              hover:bg-blue-700 bg-gradient-to-r from-pink-500 to-purple-500" (click)="openProject(project.link)">
-              <img class="h-5" src="assets/link.svg" alt="github icon">
+              <button class="flex gap-2 w-72 h-[40px] items-center justify-center px-6 py-2 rounded-full text-white font-semibold shadow-md text-center
+              hover:bg-blue-700 bg-gradient-to-r from-pink-500 to-purple-500" (click)="openProject(project)">
+                <img class="h-5" [src]="project.link ? 'assets/link.svg' : 'assets/github.svg'" alt="github icon">
 
-              {{ 'PROJECTS.VIEW_ON_PRODUCTION' | translate }}
+                {{ (project.link ? 'PROJECTS.VIEW_ON_PRODUCTION' : 'PROJECTS.VIEW_ON_GITHUB') | translate }}
             </button>
           </div>
         </div>
