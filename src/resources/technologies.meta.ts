@@ -7,7 +7,13 @@ export enum TechnoologiesEnum {
     CSS = 'CSS',
     TYPESCRIPT = 'TYPESCRIPT',
     JAVASCRIPT = 'JAVASCRIPT',
-    DAISYUI = 'DAISYUI'
+    DAISYUI = 'DAISYUI',
+
+    BOOTSTRAP = 'BOOTSTRAP',
+    MYSQL = 'MYSQL',
+    RABBITMQ = 'RABBITMQ',
+    JQUERY = 'JQUERY',
+    DOCKER = 'DOCKER'
 }
 
 export const TECHNOLOGIES_META = {
@@ -46,5 +52,37 @@ export const TECHNOLOGIES_META = {
     [TechnoologiesEnum.CSS]: {
         icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
         name: 'CSS'
-    }
+    },
+    [TechnoologiesEnum.BOOTSTRAP]: {
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+        name: 'Bootstrap'
+    },
+    [TechnoologiesEnum.MYSQL]: {
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+        name: 'MySQL'
+    },
+    [TechnoologiesEnum.RABBITMQ]: {
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg',
+        name: 'RabbitMQ'
+    },
+    [TechnoologiesEnum.JQUERY]: {
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg',
+        name: 'JQuery'
+    },
+    [TechnoologiesEnum.DOCKER]: {
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg',
+        name: 'Docker'
+    },
 }
+
+export const MAIN_TECHNOLOGIES_META = [
+    TechnoologiesEnum.LARAVEL,
+    TechnoologiesEnum.PHP,
+    TechnoologiesEnum.ANGULAR,
+    TechnoologiesEnum.TAILWIND,
+    TechnoologiesEnum.TYPESCRIPT,
+    TechnoologiesEnum.JAVASCRIPT,
+    TechnoologiesEnum.DAISYUI,
+    TechnoologiesEnum.HTML,
+    TechnoologiesEnum.CSS
+]

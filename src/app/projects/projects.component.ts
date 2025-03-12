@@ -34,13 +34,13 @@ export class ProjectsComponent {
    
     if (goTo == goToEnum.NEXT) {
       const nextImg = imgs[currentImgIndex + 1];
-      const previousImg = imgs[currentImgIndex - 1];
 
       if (nextImg) {
-        
         nextImg.show = true;
+      } else if (imgs.length - 1 == currentImgIndex) {
+        imgs[0].show = true;
       } else {
-        previousImg.show = true;
+        imgs[currentImgIndex - 1].show = true;
       }
     }
 
@@ -50,13 +50,16 @@ export class ProjectsComponent {
 
       if (previousImg) {
         previousImg.show = true;
+      } else if (!currentImgIndex) {
+        imgs[imgs.length - 1].show = true;
+       
       } else {
         nextImg.show = true;
       }
     }
   }
 
-  public openProject(link: string): void {
-    window.open(link, '_blank')
+  public openProject(project: any): void {
+    window.open(project.link ?? project.github_link, '_blank')
   }
 }

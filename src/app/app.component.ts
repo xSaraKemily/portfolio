@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { TECHNOLOGIES_META } from '../resources/technologies.meta';
+import { MAIN_TECHNOLOGIES_META, TECHNOLOGIES_META } from '../resources/technologies.meta';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ export class AppComponent {
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
 
-    this.stackList = Object.entries(TECHNOLOGIES_META).map(item => item[1]);
+    this.stackList = MAIN_TECHNOLOGIES_META.map(item => TECHNOLOGIES_META[item]);
    }
 
   public selectLanguage(language: string): void {
