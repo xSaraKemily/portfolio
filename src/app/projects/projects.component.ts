@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TECHNOLOGIES_META, TechnoologiesEnum } from '../../resources/technologies.meta';
 import { TranslateModule } from '@ngx-translate/core';
-import { PROJECTS_META, ProjectsEnum } from '../../resources/prjects.meta';
+import { PROJECTS_META } from '../../resources/prjects.meta';
 
 enum goToEnum {
   NEXT = 'NEXT',

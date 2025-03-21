@@ -15,7 +15,8 @@
         "VIEW_ON_GITHUB": "View project on GitHub",
         "PROJECT_DESCRIPTIONS": {
             "TASK_FLOW": "This is a task manager project developed for my portfolio, focusing on practicing Angular features. It allows users to add, edit, and delete tasks, with data stored in local storage instead of a database. The main goal was to implement the logic and user interface using Angular's capabilities.",
-            "DOC_STORE": "This project is a web application built with Laravel for temporarily storing PDF and DOCX files. The system allows file uploads with a size limit, manages stored files, and automatically deletes them after 24 hours, sending a message to RabbitMQ upon deletion."
+            "DOC_STORE": "This project is a web application built with Laravel for temporarily storing PDF and DOCX files. The system allows file uploads with a size limit, manages stored files, and automatically deletes them after 24 hours, sending a message to RabbitMQ upon deletion.",
+            "POMODAILY": "PomoDaily is an application developed with Angular that helps users efficiently manage their time using the Pomodoro technique. The project offers an intuitive interface to switch between focus and break periods, optimizing productivity."
         }
     }
 }

@@ -15,7 +15,8 @@
         "VIEW_ON_GITHUB": "Ver projeto no GitHub",
         "PROJECT_DESCRIPTIONS": {
             "TASK_FLOW": "Este é um projeto de gerenciador de tarefas desenvolvido para meu portfólio, ele foi desenvolvido para que eu pudesse praticar os recursos do Angular. Ele permite que os usuários adicionem, editem e excluam tarefas, armazenando os dados no local storage em vez de um banco de dados. O principal objetivo foi implementar a lógica e a interface do usuário utilizando as funcionalidades do Angular.",
-            "DOC_STORE": "Este projeto é uma aplicação web desenvolvida com Laravel para armazenar temporariamente arquivos PDF e DOCX. O sistema permite o upload de arquivos com um limite de tamanho, gerencia os arquivos armazenados e os exclui automaticamente após 24 horas, enviando uma mensagem para o RabbitMQ após a exclusão."
+            "DOC_STORE": "Este projeto é uma aplicação web desenvolvida com Laravel para armazenar temporariamente arquivos PDF e DOCX. O sistema permite o upload de arquivos com um limite de tamanho, gerencia os arquivos armazenados e os exclui automaticamente após 24 horas, enviando uma mensagem para o RabbitMQ após a exclusão.",
+            "POMODAILY": "O PomoDaily é um aplicativo desenvolvido com Angular que ajuda os usuários a gerenciar seu tempo de forma eficiente utilizando a técnica Pomodoro. O projeto oferece uma interface intuitiva para alternar entre períodos de foco e descanso, otimizando a produtividade."
         }
     }
 }
