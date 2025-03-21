@@ -18,7 +18,7 @@ export const PROJECTS_META = {
         url: 'assets/pomodaily/pomodaily-3.png'
       }
     ],
-    link: 'https://pomodaily-4zmugfng6-sara-kemily-flores-venturas-projects.vercel.app/',
+    link: 'https://pomodaily.vercel.app/',
   },
   [ProjectsEnum.DOC_STORE]: {
     name: 'Doc Store',
